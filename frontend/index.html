@@ -1,0 +1,18 @@
+<h1>MAD2</h1>
+
+<p id="message">Click below button to load message</p>
+
+<button onclick="loadMessage()">Get message from backend</button>
+
+<script>
+    function loadMessage(){
+        ('https://localhost:500/message')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementbyId('message').innerText = data.message;
+    })
+    .catch(error => {
+        console.log('Error fetching message:', error);
+    })
+}
+</script>
