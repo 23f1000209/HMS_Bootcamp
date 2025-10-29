@@ -6,7 +6,7 @@
 
 <script>
     function loadMessage(){
-        ('https://localhost:500/message')
+        fetch('https://localhost:5000/message')
     .then(response => response.json())
     .then(data => {
         document.getElementbyId('message').innerText = data.message;
