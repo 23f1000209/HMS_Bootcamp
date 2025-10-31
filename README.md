@@ -12,5 +12,7 @@ python app.py
 ## frontend 
 open another terminal and change directory to frontend and run
 
-
+cd frontend
+npm install
+npm run dev
 
