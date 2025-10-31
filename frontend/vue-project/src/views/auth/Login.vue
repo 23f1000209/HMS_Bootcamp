@@ -1,5 +1,4 @@
 <script setup>
-
 function loadMessage() {
   fetch('http://localhost:5000/')
     .then((response) => response.json())
@@ -16,10 +15,7 @@ function loadMessage() {
 </script>
 A Da
 <template>
-  <main>
-    <TheWelcome />
-  </main>
-   <h1>Welcome to MAD2 Project</h1>
+  <h1>User Login Page</h1>
 
   <p id="message">Click below button to load message</p>
 

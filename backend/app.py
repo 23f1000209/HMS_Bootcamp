@@ -21,7 +21,9 @@ api.init_app(app)
 if __name__ == '__main__':
     
     with app.app_context():
+
         db.create_all()  # Create database tables for our data models
+
         admin = User.query.filter_by(email='admin@gmail.com').first()
 
         if not admin:
@@ -30,4 +32,5 @@ if __name__ == '__main__':
             print("Admin user created with email: admin@gmail.com and password: admin")
         else:
             print("Admin user already exists with email: admin@gmail.com and password: admin")
+        
     app.run(debug=True)
